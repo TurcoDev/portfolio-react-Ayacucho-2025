@@ -1,9 +1,15 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import type { CardProps } from "../../interfaces/cardProps";
+import { ThemeContext } from "../../hooks/theme-context";
 
 
 function CardList() {
   const [projects, setProjects] = useState([]);
+    const { theme, setTheme } = useContext(ThemeContext);
+  
+    const toggleTheme = () => {
+      setTheme(theme === "light" ? "dark" : "light");
+    };
 
   useEffect(() => {
     fetch('/data/projects.json')
@@ -25,6 +31,9 @@ function CardList() {
           <li key={index}>{project.title}</li>
         ))}
       </ul>
+      <button className="theme-toggle-btn" onClick={toggleTheme}>
+        {theme === "light" ? "🌙 Modo Oscuro" : "☀️ Modo Claro"}
+      </button>
     </>
   );
 }
