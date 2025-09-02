@@ -5,6 +5,10 @@
   text-align: center;
 }
 
+header > h2.header-title {
+  color: greenyellow
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;

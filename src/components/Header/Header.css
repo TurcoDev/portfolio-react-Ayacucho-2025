@@ -29,3 +29,12 @@
   background: linear-gradient(90deg, #fc5c7d 0%, #6a82fb 100%);
   transform: scale(1.05);
 }
+
+.header-title{
+  color: #fc5c7d;
+}
+
+h2{
+  color: #6a82fb;
+}
+

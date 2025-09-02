@@ -11,7 +11,7 @@ const Header = () => {
 
   return (
     <header className={`header ${theme}`}>
-      <h2>Mi Portafolio Ayacucho 2025</h2>
+      <h2 className="header-title" id="header-title">Mi Portafolio Ayacucho 2025</h2>
       <button className="theme-toggle-btn" onClick={toggleTheme}>
         {theme === "light" ? "🌙 Modo Oscuro" : "☀️ Modo Claro"}
       </button>
